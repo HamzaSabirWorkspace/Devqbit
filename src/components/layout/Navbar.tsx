@@ -44,11 +44,9 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-        </nav>
-        
-        <a href="#contact" className="hidden md:block px-6 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-colors text-center">
+        <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="hidden md:block px-6 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-colors text-center cursor-pointer">
           Start a Project
-        </a>
+        </button>
       </div>
     </motion.header>
   );
