@@ -46,9 +46,9 @@ export default function Navbar() {
           ))}
         </nav>
         
-        <button className="hidden md:block px-6 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-colors">
+        <a href="#contact" className="hidden md:block px-6 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-colors text-center">
           Start a Project
-        </button>
+        </a>
       </div>
     </motion.header>
   );

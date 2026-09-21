@@ -26,12 +26,12 @@ export default function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto px-10 py-4 rounded-full bg-white text-black font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+            <a href="#contact" className="w-full sm:w-auto px-10 py-4 rounded-full bg-white text-black font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,255,255,0.3)] text-center inline-block">
               Start Your Project
-            </button>
-            <button className="w-full sm:w-auto px-10 py-4 rounded-full border border-white/20 text-white font-bold text-lg hover:bg-white/5 transition-colors">
+            </a>
+            <a href="#contact" className="w-full sm:w-auto px-10 py-4 rounded-full border border-white/20 text-white font-bold text-lg hover:bg-white/5 transition-colors text-center inline-block">
               Contact Devqbit
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
