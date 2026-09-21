@@ -47,12 +47,12 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-black font-semibold hover:scale-105 transition-transform text-center inline-block cursor-pointer">
+          <a href="#contact" className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-black font-semibold hover:scale-105 transition-transform text-center inline-block cursor-pointer">
             Start Your Project
-          </button>
-          <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors text-center inline-block cursor-pointer">
+          </a>
+          <a href="#services" className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors text-center inline-block cursor-pointer">
             Explore Our Services
-          </button>
+          </a>
         </motion.div>
       </div>
 

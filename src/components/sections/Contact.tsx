@@ -114,7 +114,7 @@ export default function Contact() {
               )}
             </AnimatePresence>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form action="https://formsubmit.co/devqbit.tech@gmail.com" method="POST" onSubmit={handleSubmit} className="space-y-6">
               <input type="hidden" name="_subject" value="New submission from DevqBit Website" />
               <input type="hidden" name="_template" value="table" />
               
