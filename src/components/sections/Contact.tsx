@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const projectTypes = [
     "Software Development",
@@ -19,6 +20,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(false);
     
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -38,10 +40,12 @@ export default function Contact() {
         setIsSuccess(true);
         form.reset();
         setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        setSubmitError(true);
       }
     } catch (error) {
       console.error(error);
-      alert("Failed to send message. Please try again later.");
+      setSubmitError(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -96,6 +100,16 @@ export default function Contact() {
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   <span className="font-medium">Request sent successfully! We'll get back to you soon.</span>
+                </motion.div>
+              )}
+              {submitError && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  className="absolute -top-16 left-0 right-0 bg-red-500/20 border border-red-500/50 text-red-300 px-6 py-4 rounded-xl text-center backdrop-blur-md"
+                >
+                  We could not send your request. Please email devqbit.tech@gmail.com directly.
                 </motion.div>
               )}
             </AnimatePresence>

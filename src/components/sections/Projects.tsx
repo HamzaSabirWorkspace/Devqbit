@@ -50,9 +50,9 @@ export default function Projects() {
               A showcase of our recent projects across software, AI, and gaming.
             </p>
           </div>
-          <button className="px-6 py-2 rounded-full border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-colors self-start md:self-auto">
+          <a href="https://github.com/HamzaSabirWorkspace/Devqbit" target="_blank" rel="noreferrer" className="px-6 py-2 rounded-full border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-colors self-start md:self-auto text-center">
             View All Projects
-          </button>
+          </a>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

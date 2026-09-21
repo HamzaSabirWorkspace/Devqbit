@@ -47,6 +47,7 @@ export default function Navbar() {
         <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="hidden md:block px-6 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-colors text-center cursor-pointer">
           Start a Project
         </button>
+        </nav>
       </div>
     </motion.header>
   );
